@@ -1,6 +1,6 @@
 // @flow
-import RoundButton from './components/RoundButton/RoundButton';
+import RestrictedProfileJoinCard from './components/RestrictedProfileJoinCard/RestrictedProfileJoinCard';
 
 export default {
-  RoundButton,
+  RestrictedProfileJoinCard,
 };
