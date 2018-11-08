@@ -2,6 +2,7 @@
   "name": "styleguide-material",
   "version": "0.1.0",
   "private": true,
+  "module": "src/index",
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "react": "^16.6.1",
@@ -13,10 +14,65 @@
     "build": "npx styleguidist build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "lint": "eslint src"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "airbnb",
+      "plugin:jsx-a11y/recommended",
+      "plugin:flowtype/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "import",
+      "flowtype",
+      "flow-header",
+      "jsx-a11y",
+      "react"
+    ],
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "flow-header/flow-header": "error",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "**/setupTests.js",
+            "**/*test.js*"
+          ]
+        }
+      ],
+      "no-restricted-properties": [
+        "error",
+        {
+          "object": "require",
+          "property": "ensure",
+          "message": "Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting"
+        },
+        {
+          "object": "System",
+          "property": "import",
+          "message": "Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting"
+        }
+      ]
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -25,6 +81,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-flow-header": "^0.2.0",
     "flow-bin": "^0.85.0",
     "react-styleguidist": "^8.0.3"
   }

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
@@ -15,12 +16,12 @@ const styles = {
       backgroundColor: '#fff',
       color: '#ED1E79',
       borderColor: '#fff',
-    }
+    },
   },
 };
 
-const RoundButton = (props) => (
-    <Button className={props.classes.root} {...props} />
-  );
+const RoundButton = ({ classes, ...props }) => (
+  <Button className={classes.root} {...props} />
+);
 
 export default withStyles(styles)(RoundButton);
