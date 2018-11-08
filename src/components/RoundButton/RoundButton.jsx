@@ -20,9 +20,7 @@ const styles = {
 };
 
 const RoundButton = (props) => (
-    <Button className={props.classes.root}>
-      {props.children}
-    </Button>
+    <Button className={props.classes.root} {...props} />
   );
 
 export default withStyles(styles)(RoundButton);
