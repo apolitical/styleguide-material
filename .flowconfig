@@ -6,6 +6,7 @@ src/**/*.js
 src/**/*.jsx
 
 [libs]
+flow-typed/**/*.js
 
 [lints]
 
