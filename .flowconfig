@@ -1,0 +1,14 @@
+[ignore]
+.*/findup/.*
+
+[include]
+src/**/*.js
+src/**/*.jsx
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
