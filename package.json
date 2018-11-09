@@ -1,7 +1,7 @@
 {
   "name": "@apolitical/styleguide-material",
   "version": "0.1.0",
-  "private": true,
+  "description": "Collection of components for Apolitical built on material-ui",
   "main": "build/index.js",
   "dependencies": {
     "@material-ui/core": "^3.4.0",
@@ -18,6 +18,28 @@
     "flow": "flow",
     "lint": "eslint src"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apolitical/styleguide-material.git"
+  },
+  "engines": {
+    "node": "^10.5.0",
+    "npm": "^6.1.0"
+  },
+  "author": "Thomas Geraghty <thomas.geraghty@apolitical.co>",
+  "license": "MIT",
+  "files": [
+  "build/**",
+  "CHANGELOG.md",
+  "CODE_OF_CONDUCT.md",
+  "CONTRIBUTING.md",
+  "LICENSE",
+  "README.md"
+],
+"bugs": {
+  "url": "https://github.com/apolitical/styleguide-material/issues"
+},
+"homepage": "https://github.com/apolitical/styleguide-material#readme",
   "eslintConfig": {
     "extends": [
       "airbnb",
