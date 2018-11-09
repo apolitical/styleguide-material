@@ -75,11 +75,11 @@ const RestrictedProfileJoinCard = ({ classes }: PropTypes) => (
         {' '}
          policy makers in 140+ countries. It&apos;s free!
       </Typography>
-      <Button className={classes.button}>Join for free</Button>
+      <Button className={classes.button} href="/signup?ref=restricted-profile">Sign up, it&apos;s free</Button>
       <Typography className={classes.smallTypography}>
           Already have an account?
         {' '}
-        <a href="https://apolitical.co" className={classes.loginLink}>Log in</a>
+        <a href="/login" className={classes.loginLink}>Log in</a>
         {' '}
 now
       </Typography>
