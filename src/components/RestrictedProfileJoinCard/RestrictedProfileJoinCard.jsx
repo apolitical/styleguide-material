@@ -10,7 +10,9 @@ type PropTypes = {
   classes: {
     root: Object,
     content: Object,
-    typography: Object,
+    largeTypography: Object,
+    smallTypography: Object,
+    loginLink: Object,
     button: Object,
   },
 };
@@ -31,14 +33,25 @@ const styles = {
   content: {
     minWidth: '500px',
   },
-  typography: {
+  largeTypography: {
     textAlign: 'center',
     color: '#fff',
     fontFamily: ['Lato', 'sans-serif'],
     fontSize: '30px',
     fontWeight: '300',
   },
+  smallTypography: {
+    textAlign: 'center',
+    color: '#fff',
+    fontFamily: ['Lato', 'sans-serif'],
+    fontSize: '12px',
+    marginTop: '5px',
+  },
+  loginLink: {
+    color: '#fff',
+  },
   button: {
+    marginTop: '40px',
     backgroundColor: '#ED1E79',
     color: '#fff',
     minWidth: '250px',
@@ -57,12 +70,19 @@ const styles = {
 const RestrictedProfileJoinCard = ({ classes }: PropTypes) => (
   <Card className={classes.root}>
     <CardContent className={classes.content}>
-      <Typography className={classes.typography}>
+      <Typography className={classes.largeTypography}>
         Join Apolitical to see full profiles and connect with
         {' '}
          policy makers in 140+ countries. It&apos;s free!
       </Typography>
       <Button className={classes.button}>Join for free</Button>
+      <Typography className={classes.smallTypography}>
+          Already have an account?
+        {' '}
+        <a href="https://apolitical.co" className={classes.loginLink}>Log in</a>
+        {' '}
+now
+      </Typography>
     </CardContent>
   </Card>
 );
