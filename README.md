@@ -3,7 +3,6 @@ Apolitical Styleguide
 
 [![GitHub release](https://img.shields.io/github/release/apolitical/styleguide-material.svg)](https://github.com/apolitical/styleguide-material/releases)
 [![GitHub license](https://img.shields.io/github/license/apolitical/styleguide-material.svg)](https://github.com/apolitical/styleguide-material/blob/master/LICENSE)
-[![CircleCI](https://img.shields.io/circleci/project/github/apolitical/styleguide-material/master.svg)](https://circleci.com/gh/apolitical/styleguide-material)
 
 This is a collection of React Components to be used in Apoliticals Frontend Applications. The difference is this one is based on material-ui's React components.
 
