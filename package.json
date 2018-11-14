@@ -1,6 +1,6 @@
 {
   "name": "@apolitical/styleguide-material",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Collection of components for Apolitical built on material-ui",
   "main": "build/index.js",
   "dependencies": {
