@@ -17,7 +17,10 @@
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "preversion": "npm t && npm run lint && npm run flow",
+    "version": "npm run build && git add -A build",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
