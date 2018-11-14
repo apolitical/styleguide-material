@@ -1,6 +1,6 @@
 // @flow
 import RestrictedProfileJoinCard from './components/RestrictedProfileJoinCard/RestrictedProfileJoinCard';
 
-export {
+export default {
   RestrictedProfileJoinCard,
 };

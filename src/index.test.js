@@ -1,7 +1,8 @@
 // @flow
 
-import { RestrictedProfileJoinCard } from './index';
+import components from './index';
 
 it('Exports the components', () => {
-  expect(RestrictedProfileJoinCard).toBeTruthy();
+  expect(components).toBeTruthy();
+  expect(components.RestrictedProfileJoinCard).toBeTruthy();
 });
