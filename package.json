@@ -13,7 +13,8 @@
     "start": "npx styleguidist server",
     "build": "NODE_ENV=production babel src -d build",
     "build:styleguide": "npx styleguidist build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
     "lint": "eslint src"
@@ -121,6 +122,10 @@
       ],
       "@babel/plugin-proposal-class-properties"
     ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "roots": ["src"]
   },
   "browserslist": [
     ">0.2%",
