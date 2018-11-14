@@ -1,6 +1,6 @@
 {
   "name": "@apolitical/styleguide-material",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Collection of components for Apolitical built on material-ui",
   "main": "build/index.js",
   "dependencies": {
@@ -30,17 +30,17 @@
   "author": "Thomas Geraghty <thomas.geraghty@apolitical.co>",
   "license": "MIT",
   "files": [
-  "build/**",
-  "CHANGELOG.md",
-  "CODE_OF_CONDUCT.md",
-  "CONTRIBUTING.md",
-  "LICENSE",
-  "README.md"
-],
-"bugs": {
-  "url": "https://github.com/apolitical/styleguide-material/issues"
-},
-"homepage": "https://github.com/apolitical/styleguide-material#readme",
+    "build/**",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "bugs": {
+    "url": "https://github.com/apolitical/styleguide-material/issues"
+  },
+  "homepage": "https://github.com/apolitical/styleguide-material#readme",
   "eslintConfig": {
     "extends": [
       "airbnb",
@@ -125,7 +125,9 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
-    "roots": ["src"]
+    "roots": [
+      "src"
+    ]
   },
   "browserslist": [
     ">0.2%",
