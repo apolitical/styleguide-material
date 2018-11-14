@@ -141,6 +141,6 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-flow-header": "^0.2.0",
     "flow-bin": "^0.86.0",
-    "react-styleguidist": "^8.0.3"
+    "react-styleguidist": "^8.0.4"
   }
 }
