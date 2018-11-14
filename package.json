@@ -1,6 +1,6 @@
 {
   "name": "@apolitical/styleguide-material",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Collection of components for Apolitical built on material-ui",
   "main": "build/index.js",
   "dependencies": {
@@ -19,7 +19,7 @@
     "flow": "flow",
     "lint": "eslint src",
     "preversion": "npm t && npm run lint && npm run flow",
-    "version": "npm run build && git add -A build",
+    "version": "npm run build",
     "postversion": "git push && git push --tags"
   },
   "repository": {
