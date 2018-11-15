@@ -32,9 +32,6 @@ const styles = {
     position: 'absolute',
     zIndex: '5000',
   },
-  content: {
-    minWidth: '500px',
-  },
   largeTypography: {
     textAlign: 'center',
     color: '#fff',
@@ -71,7 +68,7 @@ const styles = {
 
 const RestrictedProfileJoinCard = ({ classes }: PropTypes) => (
   <Card className={classes.root}>
-    <CardContent className={classes.content}>
+    <CardContent>
       <Typography className={classes.largeTypography}>
         Join Apolitical to see full profiles and connect with
         {' '}
