@@ -1,7 +1,8 @@
 // @flow
 
-import styleguideObject from './index';
+import components from './index';
 
 it('Exports the components', () => {
-  expect(styleguideObject).toBeTruthy();
+  expect(components).toBeTruthy();
+  expect(components.RestrictedProfileJoinCard).toBeTruthy();
 });
