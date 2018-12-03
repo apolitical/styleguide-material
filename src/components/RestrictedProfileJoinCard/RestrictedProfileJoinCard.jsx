@@ -30,7 +30,7 @@ const styles = {
     maxWidth: '600px',
     minHeight: '380px',
     position: 'absolute',
-    zIndex: '5000',
+    zIndex: '-1',
   },
   content: {
     minWidth: '500px',
