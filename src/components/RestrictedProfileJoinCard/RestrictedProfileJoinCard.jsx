@@ -29,8 +29,7 @@ const styles = {
     fontWeight: '300',
     maxWidth: '600px',
     minHeight: '380px',
-    position: 'absolute',
-    zIndex: '-1',
+    gridArea: '1/1',
   },
   content: {
     minWidth: '500px',
