@@ -1,0 +1,62 @@
+#########
+# Reuse #
+#########
+variables:
+  RUNNER_IMAGE: $CI_REGISTRY_IMAGE/builder:$CI_PIPELINE_ID
+
+##########
+# Stages #
+##########
+
+stages:
+  - Prepare     # Prepare the tools we'll need for the rest of the pipeline
+  - Quality     # Quality checks, unit tests, lints, etc
+
+###########
+# Prepare #
+###########
+Build Runner:
+  stage: Prepare
+  image: docker:stable
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    DOCKER_DRIVER: overlay2
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker build . -f .gitlab-ci/runner/Dockerfile -t $RUNNER_IMAGE
+    - docker push $RUNNER_IMAGE
+
+###########
+# Quality #
+###########
+.quality:
+  stage: Quality
+  image:  $RUNNER_IMAGE
+  before_script:
+    - cp -r /app/node_modules .
+
+Unit test:
+  extends: .quality
+  script:
+    - npm run test
+    - npm run coverage
+
+Lint:
+  extends: .quality
+  script:
+    - npm run lint
+
+Audit:
+  extends: .quality
+  allow_failure: true
+  script:
+    - npm run audit
+
+Dependencies:
+  extends: .quality
+  allow_failure: true
+  script:
+    - npm outdated
