@@ -51,7 +51,6 @@ Lint:
 
 Audit:
   extends: .quality
-  allow_failure: true
   script:
     - npm run audit
 
