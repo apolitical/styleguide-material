@@ -49,6 +49,11 @@ Lint:
   script:
     - npm run lint
 
+Flow:
+  extends: .quality
+  script:
+    - npm run flow
+
 Audit:
   extends: .quality
   script:
