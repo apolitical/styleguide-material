@@ -15,14 +15,16 @@
     "dev-lite": "concurrently --names 'SRVR,BUILD'  -c 'black.bgCyan.bold,black.bgWhite.bold' 'npm run start' 'npm run start:build'",
     "start:build": "nodemon --exec 'npm run build || true'",
     "build:styleguide": "npx styleguidist build",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
     "lint": "eslint src",
     "preversion": "npm t && npm run lint && npm run flow",
     "version": "npm run build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "coverage": "codecov",
+    "audit": "npm-audit-ci -h"
   },
   "repository": {
     "type": "git",
@@ -149,14 +151,16 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "concurrently": "^4.1.0",
     "babel-plugin-add-module-exports": "^1.0.0",
+    "codecov": "^3.1.0",
+    "concurrently": "^4.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-flow-header": "^0.2.0",
     "flow-bin": "^0.87.0",
     "nodemon": "^1.18.7",
+    "npm-audit-ci": "^1.0.1",
     "react-styleguidist": "^8.0.4"
   }
 }
