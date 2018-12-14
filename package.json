@@ -158,7 +158,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-flow-header": "^0.2.0",
-    "flow-bin": "^0.87.0",
+    "flow-bin": "^0.89.0",
     "nodemon": "^1.18.7",
     "npm-audit-ci": "^1.0.1",
     "react-styleguidist": "^8.0.4"
