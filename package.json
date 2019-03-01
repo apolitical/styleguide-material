@@ -161,6 +161,6 @@
     "flow-bin": "^0.94.0",
     "nodemon": "^1.18.9",
     "npm-audit-ci": "^1.1.0",
-    "react-styleguidist": "^8.0.4"
+    "react-styleguidist": "^9.0.1"
   }
 }
